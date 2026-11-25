@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> My first Portfolio</title>
+  <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: white
+   
+}
+
+/* Navigation */
+header {
+    background: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+      border-bottom: 2px solid whitesmoke;
+}
+
+
+
+nav a {
+  color: black;
+    text-decoration: none;
+    margin-left: 18px;
+    font-weight: bold;
+   
+}
+
+/* Home */
+.home {
+    min-height: 550px;
+    padding: 70px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    color: white;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home h1 {
+    font-size: 55px;
+    margin: 15px 0;
+    color: black;
+}
+
+.home h1 span {
+    color:  #2563eb;
+}
+
+.profile img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    border: 6px solid #2563eb;
+    object-fit: cover;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    margin: 5px;
+    background: #2563eb;
+    color: #20213a;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: 
+    transform:translateY(-3px);
+}
+
+/* Sections */
+section:not(.home) {
+    padding: 65px 8%;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #20213a;
+}
+
+section p {
+    color: #62677b;
+}
+
+/* Skills and Projects */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 12px #00000010;
+}
+
+.card h3 {
+    color:#2563eb;
+    margin-bottom: 10px;
+}
+
+#skills,
+#projects {
+    background: #eef0f8;
+}
+
+/* Education */
+.education {
+    border-left: 4px solid #2563eb;
+    padding-left: 20px;
+}
+
+.education h3 {
+    margin-top: 18px;
+    color: #2563eb;
+}
+
+/* Contact */
+#contact {
+    text-align: center;
+}
+
+#contact p {
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background: #20213a;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+/* Responsive design */
+@media (max-width: 750px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .profile img {
+        width: 200px;
+        height: 200px;
+    }
+}
+</style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Hello,<BR> I'm <span>Charlotte</span><BR> Web Disgner</h1>
+            <a href="document/CV.pdf"
+               target="_blank"
+               class="btn"> ☁ Resume</a>
+
+        </div>
+
+        <div class="profile">
+            <img src="image/Charlotte.png"
+                 alt="Charlotte profile picture">
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            My name is Charlotte. I am a student interested in
+            technology and web development. I am learning
+            coding and improving my skills through practice.
+            I also enjoy helping other students strengthen
+            their learning foundations.
+        </p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <h2>My Skills</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>HTML</h3>
+                <p>Creating website structures.</p>
+            </div>
+
+            <div class="card">
+                <h3>CSS</h3>
+                <p>Designing and styling websites.</p>
+            </div>
+
+            <div class="card">
+                <h3>JavaScript</h3>
+                <p>Learning programming and website interaction.</p>
+            </div>
+
+            <div class="card">
+                <h3>PCB</h3>
+                <p>Developing my technical knowledge.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+        <h2>My Education</h2>
+
+        <div class="education">
+          <p>I was student at college adventiste de rwankeri in combination of PCB.
+            But now I'am student in coding the programming called the GYM</p> 
+           
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <h2>My Projects</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Personal Portfolio</h3>
+                <p>A personal website built using HTML and CSS.</p>
+            </div>
+
+            <div class="card">
+                <h3>JavaScript Exercises</h3>
+                <p>Practice projects to improve my coding skills.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+
+        <p>Email: pcharlotte1003gmail.com</p>
+
+        <a href="mailto:pcharlotte1003gmail.com"
+           class="btn">Send Me an Email</a>
+    </section>
+
+    <footer>
+        <p>© 2026 Charlotte. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+
